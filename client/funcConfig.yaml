@@ -1,0 +1,12 @@
+apiVersion: fn.kpt.dev/v1alpha1
+kind: YourFunction
+metadata:
+  name: example
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'fn.kpt.dev|YourFunction|default|test'
+values:
+  image:
+    raemis:
+      pullPolicy: Never
+      repo: "centos7/raemis-default-pcn-virtual"
+      tag: "5.2.5.1-1"
